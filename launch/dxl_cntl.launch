@@ -1,0 +1,16 @@
+<launch>
+ <!-- DXL joy Node-->
+  <!--node pkg="dxl_cntl" type="" name=""/-->
+
+
+ <!-- joy node -->
+  <node respawn="true" pkg="joy"
+        type="joy_node" name="forest_joy" >
+    <param name="dev" type="string" value="/dev/input/js0" />
+    <param name="deadzone" value="0.12" />
+  </node>
+
+ <!-- Axes -->
+    <node pkg="dxl_cntl" type="dxl_cntl" name=""/>
+
+</launch>
